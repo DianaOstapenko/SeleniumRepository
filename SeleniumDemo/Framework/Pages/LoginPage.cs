@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using SeleniumExtras.PageObjects;
 
-namespace SeleniumDemo
+namespace SeleniumDemo.Framework.Pages
 {
 	public class LoginPage
 	{
