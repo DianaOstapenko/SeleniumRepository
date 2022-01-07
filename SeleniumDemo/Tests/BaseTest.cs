@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
+using SeleniumDemo.Framework;
 
-namespace SeleniumDemo
+namespace SeleniumDemo.Tests
 {
 	[TestFixture]
 	public class TestBase
@@ -16,6 +17,9 @@ namespace SeleniumDemo
 		{
 			Browser.Close();
 		}
+
+		private static Settings _settings = new Settings();
+		public static Settings Settings { get { return _settings; } }
 
 	}
 }

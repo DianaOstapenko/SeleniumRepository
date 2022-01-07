@@ -1,18 +1,17 @@
-﻿using System;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace SeleniumDemo
+namespace SeleniumDemo.Framework
 {
 	public static class Browser
 		{
-			public static IWebDriver WebDriver; 
-			private const string BaseUrl = "http://automationpractice.com/index.php";
+			public static IWebDriver WebDriver;
+			private static Settings _settings = new Settings();
 
 			public static void Initialize()
 			{
 				WebDriver = new ChromeDriver(@"C:\webdrivers");
-				WebDriver.Navigate().GoToUrl(BaseUrl);
+				WebDriver.Navigate().GoToUrl(_settings.Host);
 				WebDriver.Manage().Window.Maximize();
 				System.Threading.Thread.Sleep(2000);
 			}
